@@ -18,11 +18,14 @@
 <div class="container">
 	<div class="row">
 		<form class="search-form" ng-submit="search()">
-			<input type="text">
+			<input type="text" ng-model="carToAdd">
 			<input type="submit" class="btn btn-primary">
 		</form>
 	</div>
-	<div class="row" ng-show="status">{{status}}: {{result}}</div>
+</div>
+
+<div class="container">
+	<div class="row" ng-repeat="item in results">{{item.name}}</div>
 </div>
 
 </body>
